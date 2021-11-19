@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(#wv=k&8ehe*i!b31q#k2-v+35^&thnrni!81ktcige#jr^n3h'
+SECRET_KEY = 'django-insecure-s#e_)dj5183#8ya72g+f!r)lv59nxkwmpmsx(q8=hy+(n9k_qn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'mainapp',
+    'adminapp',
+    'authapp',
     'basketapp',
-    'authapp'
+    'mainapp',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+LOGIN_URL = '/auth/login/'
+LOGIN_URL = '/auth/login/'
