@@ -18,8 +18,15 @@ def index(request):
 def contact(request):
     context = {
         'title': 'Контакты',
+        'basket': get_basket(request.user)
     }
     return render(request, 'mainapp/contact.html', context)
+
+
+def get_basket(user):
+    if user.is_authenticated:
+        return sum(list(Basket.objects.filter(user=user).values_list('quantity', flat=True)))
+    return 0
 
 
 def get_hot_product():
