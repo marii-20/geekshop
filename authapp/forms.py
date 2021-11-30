@@ -74,7 +74,7 @@ class ShopUserEditForm(UserChangeForm):
 class ShopUserProfileEditForm(forms.ModelForm):
     class Meta:
         model = ShopUserProfile
-        exclude = ('user')
+        exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
