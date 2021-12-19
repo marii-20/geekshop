@@ -227,4 +227,4 @@ if DEBUG:
        'template_profiler_panel.panels.template.TemplateProfilerPanel',
    ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
